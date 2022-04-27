@@ -1,20 +1,21 @@
-import React from 'react';
+import React from "react";
 
-import style from './MyPosts.module.css';
-import Posts from './Post/Posts';
+import style from "./MyPosts.module.css";
+import Posts from "./Post/Posts";
 
 const MyPosts = (props) => {
-  let postsElement = props.posts
-  .map(post => (
-<Posts message={post.post} likesCount={post.likesCount}  />
+  let postsElement = props.posts.map((post) => (
+    <Posts message={post.post} likesCount={post.likesCount} />
   ));
 
   let newPostelement = React.createRef();
+
   let addPost = () => {
+    props.addPost();
+  };
+  let onPostChange = () => {
     let text = newPostelement.current.value;
-    props.addPost(text);
-    newPostelement.current.value = '';
-    
+    props.updatePostText(text);
   };
 
   return (
@@ -22,7 +23,11 @@ const MyPosts = (props) => {
       <div>My posts</div>
       <div>
         <div>
-          <textarea ref={newPostelement}></textarea>
+          <textarea
+            ref={newPostelement}
+            onChange={onPostChange}
+            value={props.newPostText}
+          />
         </div>
         <div>
           <button onClick={addPost}>add posts</button>

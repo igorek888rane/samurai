@@ -1,0 +1,17 @@
+.friendList {
+}
+.friend {
+  display: flex;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+.icon {
+  width: 100px;
+  height: 100px;
+  background-color: coral;
+  border-radius: 50px;
+}
+.name{
+    margin-left: 20px;
+    margin-top: 40px;
+}

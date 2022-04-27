@@ -1,0 +1,36 @@
+.newsBlock {
+  display: block;
+  margin-top: 25px;
+}
+.news {
+  margin: auto;
+  margin-top: 10px;
+  width: 600px;
+  background-color: rgba(218, 218, 75, 0.808);
+}
+.imgNews img {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.newsText {
+  font-size: 20px;
+  text-align: center;
+}
+
+.like {
+  margin: 5px;
+  font-size: 25px;
+  position:relative;
+  left: 90%;
+}
+.like span {
+  color: red;
+}
+.like img {
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+}

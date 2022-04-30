@@ -1,4 +1,5 @@
 import React from "react";
+import { addMessageActionCreation, updateMessageActionCreation } from "../../redux/state";
 import DialogItem from "./DialogItem/DialogItem";
 import style from "./Dialogs.module.css";
 import Message from "./Message/Message";
@@ -15,11 +16,11 @@ const Dialogs = (props) => {
   let newMessage = React.createRef();
 
   let sendMessage = () => {
-    props.dispatch({type:'ADD-MESSAGE'});
+    props.dispatch(addMessageActionCreation());
   };
   let onChangeMessage = () => {
     let text = newMessage.current.value;
-    props.dispatch({type:'UPDATE-MESSAGE-TEXT',text : text});
+    props.dispatch(updateMessageActionCreation(text));
   };
 
   return (

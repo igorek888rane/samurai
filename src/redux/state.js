@@ -1,3 +1,8 @@
+let ADD_POST =  "ADD-POST";
+let UPDATE_POST_TEXT =  "UPDATE-POST-TEXT";
+let ADD_MESSAGE =  "ADD-MESSAGE";
+let UPDATE_MESSAGE_TEXT =  "UPDATE-MESSAGE-TEXT";
+
 let store = {
   _state: {
     dialogsPage: {
@@ -66,7 +71,7 @@ let store = {
   },
 
   dispatch(action) {
-    if (action.type === "ADD-POST") {
+    if (action.type === ADD_POST) {
       let newPost = {
         id: this._state.profilePage.posts.length + 1,
         post: this._state.profilePage.newPostText,
@@ -76,10 +81,10 @@ let store = {
       this._state.profilePage.posts.push(newPost);
       this._state.profilePage.newPostText = "";
       this._callSubscriber(this._state);
-    } else if (action.type === "UPDATE-POST-TEXT") {
+    } else if (action.type === UPDATE_POST_TEXT) {
       this._state.profilePage.newPostText = action.text;
       this._callSubscriber(this._state);
-    } else if (action.type === "ADD-MESSAGE") {
+    } else if (action.type === ADD_MESSAGE) {
       let newMessage = {
         id: this._state.dialogsPage.messages.length + 1,
         message: this._state.dialogsPage.newMessageText,
@@ -87,13 +92,29 @@ let store = {
       this._state.dialogsPage.messages.push(newMessage);
       this._state.dialogsPage.newMessageText = "";
       this._callSubscriber(this._state);
-    } else if (action.type === "UPDATE-MESSAGE-TEXT") {
+    } else if (action.type === UPDATE_MESSAGE_TEXT ) {
       this._state.dialogsPage.newMessageText = action.text;
       this._callSubscriber(this._state);
     }
   },
 
-  // addPost() {
+  
+};
+window.store = store;
+export const  addPostActionCreation = () =>({type:ADD_POST})
+export const  updatePostActionCreation = (text) =>({type:UPDATE_POST_TEXT,text:text})
+
+export const  addMessageActionCreation = () =>({type:ADD_MESSAGE})
+export const  updateMessageActionCreation = (text) =>({type:UPDATE_MESSAGE_TEXT,text:text})
+export default store;
+
+
+
+
+
+
+
+// addPost() {
   //   let newPost = {
   //     id: this._state.profilePage.posts.length + 1,
   //     post: this._state.profilePage.newPostText,
@@ -124,6 +145,3 @@ let store = {
   //   this._state.dialogsPage.newMessageText = text;
   //   this._callSubscriber(this._state);
   // },
-};
-window.store = store;
-export default store;

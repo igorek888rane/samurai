@@ -1,6 +1,6 @@
 import dialogsReducer from "./dialogsReducer";
 import friendsReducer from "./friendsReducer";
-import newPageReducer from "./newPageReducer";
+import newsPageReducer from "./newsPageReducer";
 import profileReducer from "./profileReducer";
 
 let store = {
@@ -74,7 +74,7 @@ let store = {
     this._state.profilePage = profileReducer(this._state.profilePage,action);
     this._state.dialogsPage = dialogsReducer(this._state.dialogsPage,action);
     this._state.friends = friendsReducer(this._state.friends,action);
-    this._state.newsPage = newPageReducer(this._state.newsPage,action);
+    this._state.newsPage = newsPageReducer(this._state.newsPage,action);
     this._callSubscriber(this._state);
   },
 };

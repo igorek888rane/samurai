@@ -4,7 +4,7 @@ import FriendsBar from './FriendsBar/FriendsBar';
 import style from './Navbar.module.css';
 
 const Navbar = (props) => {
-  let friendsBarEl = props.state.friends.map(friends =>(<FriendsBar name = {friends.name}/>))
+  let friendsBarEl = props.state.friendsPage.friends.map(friends =>(<FriendsBar name = {friends.name}/>))
   friendsBarEl.length = 3;
   return (
     <nav className={style.nav}>

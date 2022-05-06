@@ -8,7 +8,7 @@ const DialogItem = (props) => {
     <div className={style.userItem}>
       <div className={style.icon}></div>
       <NavLink
-        to={'/dialogs/' + props.id}
+        to={'/dialogs/' + props.key}
         className={(dialogData) =>
           dialogData.isActive ? style.active : style.dialog
         }

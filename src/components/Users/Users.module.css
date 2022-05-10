@@ -1,0 +1,59 @@
+.users {
+  margin-left: 50px;
+}
+.user {
+  display: flex;
+  margin-top: 10px;
+}
+.user_avatar {
+  margin-right: 10px;
+}
+.user_avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+.button {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  margin-top: 5px;
+  width: 100px;
+  height: 30px;
+  background-color: green;
+  border: 0px;
+  border-radius: 20px;
+  
+}
+.followed_{
+  color: white;
+}
+
+.user_info {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 3px green solid;
+  border-radius: 10px;
+  font-size: 25px;
+  color: white;
+}
+.fullname span { 
+  position: relative;
+  top: 10px;
+  left: 10px;
+
+}
+.status span {
+  position: relative;
+  top: 60px;
+  left: 10px;
+}
+
+.location span {
+  display: flex;
+  position: relative;
+  left: 650px;
+  bottom: 7px;
+}

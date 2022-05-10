@@ -22,10 +22,10 @@
   padding: 25px;
 }
 .dialogsItems .active {
-  color: gold;
+  color: green;
 }
 .dialogsItems .dialog {
-  color: white;
+  color: black;
 }
 .dialogsItems .icon {
   width: 50px;

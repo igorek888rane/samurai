@@ -1,14 +1,12 @@
 .nav {
   grid-area: n;
-  background-color: burlywood;
+  background-color: green;
   padding: 20px;
   width: 100%;
-  
- 
+  margin-top: 10px;
 }
-.nav h3{
+.nav h3 {
   font-size: 20px;
- 
 }
 .nav h3 a {
   text-decoration: none;
@@ -23,15 +21,12 @@
   color: black;
 }
 .friends {
-  
   display: flex;
-  
 }
-.friend{
-
+.friend {
   padding: 5px;
 }
-.icon{
+.icon {
   width: 40px;
   height: 40px;
   background-color: coral;

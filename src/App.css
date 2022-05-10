@@ -8,11 +8,9 @@
   /* grid-gap: 10px; */
   width: 1200px;
   margin: 0px auto;
- 
-  
 }
 .app-wrapper-content {
+  margin-top: 10px;
   grid-area: c;
-  background-color: cornflowerblue;
-
+  background-color: rgb(61, 179, 226);
 }

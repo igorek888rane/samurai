@@ -1,5 +1,7 @@
 .users {
   margin-left: 50px;
+  display: flex;
+  flex-direction: column;
 }
 .user {
   display: flex;
@@ -24,10 +26,15 @@
   background-color: green;
   border: 0px;
   border-radius: 20px;
-  
 }
-.followed_{
+.followed_ {
   color: white;
+ 
+}
+.get_btn {
+  width: 200px;
+  color: white;
+  align-self: center;
 }
 
 .user_info {
@@ -39,11 +46,10 @@
   font-size: 25px;
   color: white;
 }
-.fullname span { 
+.fullname span {
   position: relative;
   top: 10px;
   left: 10px;
-
 }
 .status span {
   position: relative;
